@@ -63,7 +63,7 @@ function init(serverResult) {
     let humidityElement = document.getElementById('humidity');
 
     cityHeader.innerHTML = serverResult.name + ', ' + serverResult.sys.country;
-    timeCollectedElement.innerHTML = 'As of: ' + formattedTime + ' PST';
+    timeCollectedElement.innerHTML = 'As of: ' + formattedTime + ' EST';
     weatherIcon.src = 'http://openweathermap.org/img/w/' + serverResult.weather[0].icon +'.png';
     temperatureElement.innerHTML = Math.floor(serverResult.main.temp) + '&#176 F' + ' / ' + Math.floor((Math.floor(serverResult.main.temp) - 32) * (5 / 9)) + '&#176 C';
     weatherDescriptionHeader.innerText = resultDescription.charAt(0).toUpperCase() + resultDescription.slice(1);
@@ -78,3 +78,11 @@ document.getElementById('search-button').addEventListener('click', () => {
     if(searchTerm)
         searchWeather(searchTerm);
 })
+
+document.addEventListener("keyup", function(event) {
+    if (event.code === 'Enter') {
+        let searchTerm = document.getElementById('search-input').value;
+        if(searchTerm)
+            searchWeather(searchTerm);
+    }
+});

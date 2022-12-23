@@ -7,3 +7,41 @@ body {
     text-shadow: 2px 2px 1px black;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
+
+h1 {
+    font-size: 80px;
+}
+
+h4 {
+    font-size: 40px;
+}
+
+input {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    width: 30%;
+    height: 5%;
+    padding: 0 20px;
+}
+
+input,
+input::placeholder {
+    font: 35px/3 sans-serif;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    width: 30%;
+    height: 4%;
+    padding: 0 20px;
+}
+
+button,
+button::placeholder {
+    font: 25px/3 sans-serif;
+}
