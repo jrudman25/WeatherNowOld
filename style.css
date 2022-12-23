@@ -27,7 +27,7 @@ input {
 
 input,
 input::placeholder {
-    font: 35px/3 sans-serif;
+    font: 21px/3 sans-serif;
 }
 
 button {
@@ -43,5 +43,5 @@ button {
 
 button,
 button::placeholder {
-    font: 25px/3 sans-serif;
+    font: 14px/3 sans-serif;
 }
