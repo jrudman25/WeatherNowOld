@@ -1,3 +1,4 @@
+/* The background image and font */
 body {
     background-image: url(default.jpg);
     background-size: cover;
@@ -8,14 +9,27 @@ body {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
+/* Main headings */
 h1 {
-    font-size: 80px;
+    font-size: 250%;
 }
 
+/* Secondary headings */
+h2 {
+    font-size: 200%;
+}
+
+/* Other headings */
+h3 {
+    font-size: 150%;
+}
+
+/* Small headings */
 h4 {
-    font-size: 40px;
+    font-size: 100%;
 }
 
+/* Input text box */
 input {
     display: flex;
     margin: auto;
@@ -25,11 +39,13 @@ input {
     padding: 0 20px;
 }
 
+/* Input text box inner text */
 input,
 input::placeholder {
     font: 21px/3 sans-serif;
 }
 
+/* Search box */
 button {
     display: flex;
     justify-content: center;
@@ -41,6 +57,7 @@ button {
     padding: 0 20px;
 }
 
+/* Search box inner text */
 button,
 button::placeholder {
     font: 14px/3 sans-serif;

@@ -1,4 +1,5 @@
 <html>
+    <!-- Document setup -->
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
@@ -6,24 +7,26 @@
         <title>WeatherNow</title>
     </head>
     <body>
+        <!-- Search box and search button -->
         <div id="search-container">
             <input class="search-control" type="text" placeholder="Enter a city or a zipcode" id="search-input">
             <button class="search-control" id="search-button">Search with WeatherNow!</button>
         </div>
+        <!-- Weather information -->
         <div id="weather-container">
             <div id="weather-description">
                 <h1 id="city-header"></h1>
-                <h4 id="time-collected"></h4>
                 <div id="weather-main">
-                    <h4 id="temperature"></h4>
-                    <h4 id="weather-description-header"></h4>
+                    <h2 id="temperature"></h2>
+                    <h4 id="time-collected"></h4>
+                    <h3 id="weather-description-header"></h3>
                     <div><img id="document-icon-image"></div>
                 </div>
-                <hr>
-                <h4 id="cloudiness" class="bottomDetails"></h4>
-                <h4 id="wind-speed" class="bottomDetails"></h4>
-                <h4 id="wind-direction" class="bottomDetails"></h4>
-                <h4 id="humidity" class="bottomDetails"></h4>
+
+                <h3 id="cloudiness" class="bottomDetails"></h3>
+                <h3 id="wind-speed" class="bottomDetails"></h3>
+                <h3 id="wind-direction" class="bottomDetails"></h3>
+                <h3 id="humidity" class="bottomDetails"></h3>
             </div>
         </div>
         <script src="app.js"></script>

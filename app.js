@@ -2,6 +2,7 @@ const appId = '7d1e9298abb364ee3facc16be9cac6e8';
 let units = 'imperial';
 let searchMethod;
 
+// determines search type
 function getSearchMethod(searchTerm) {
     if(searchTerm.length === 5 && Number.parseInt + '' === searchTerm)
         searchMethod = 'zip';
@@ -9,6 +10,7 @@ function getSearchMethod(searchTerm) {
         searchMethod = 'q';
 }
 
+// performs the weather search
 function searchWeather(searchTerm) {
     getSearchMethod(searchTerm);
     fetch(`https://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appId}&units=${units}`).then(result => {
@@ -18,6 +20,7 @@ function searchWeather(searchTerm) {
     })
 }
 
+// changes background image based on weather
 function init(serverResult) {
     switch(serverResult.weather[0].main) {
         case 'Clear':
@@ -62,6 +65,7 @@ function init(serverResult) {
     let windDirectionElemenet = document.getElementById('wind-direction');
     let humidityElement = document.getElementById('humidity');
 
+    // displays results as text
     cityHeader.innerHTML = serverResult.name + ', ' + serverResult.sys.country;
     timeCollectedElement.innerHTML = 'As of: ' + formattedTime + ' EST';
     weatherIcon.src = 'http://openweathermap.org/img/w/' + serverResult.weather[0].icon +'.png';
@@ -73,12 +77,14 @@ function init(serverResult) {
     humidityElement.innerHTML = 'Humidity level: ' + serverResult.main.humidity + '%';
 }
 
+// search button click detection
 document.getElementById('search-button').addEventListener('click', () => {
     let searchTerm = document.getElementById('search-input').value;
     if(searchTerm)
         searchWeather(searchTerm);
-})
+});
 
+// event listener for searching on Enter press
 document.addEventListener("keyup", function(event) {
     if (event.code === 'Enter') {
         let searchTerm = document.getElementById('search-input').value;
