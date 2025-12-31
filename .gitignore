@@ -1,0 +1,6 @@
+/.firebase
+/.idea
+/node_modules
+config.js
+.firebaserc
+TODO.txt
