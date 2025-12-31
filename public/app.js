@@ -1,4 +1,4 @@
-const appId = "7d1e9298abb364ee3facc16be9cac6e8";
+const appId = window.CONFIG.API_KEY;
 let units = 'imperial';
 let searchMethod;
 
